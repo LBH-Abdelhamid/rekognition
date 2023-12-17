@@ -29,7 +29,7 @@ app.post('/api/recognize', upload.single("image"), function (req, res, next) {
 
 	rekognition.searchFacesByImage({
 	 	"CollectionId": config.collectionName,
-	 	"FaceMatchThreshold": 0,
+	 	"FaceMatchThreshold": 80,
 	 	"Image": { 
 	 		"Bytes": bitmap,
 	 	},
